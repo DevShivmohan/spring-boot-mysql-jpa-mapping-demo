@@ -18,7 +18,7 @@ public class StudentController {
         return studentService.saveStudent(student);
     }
 
-    @GetMapping("/get")
+    @GetMapping("/students")
     public ResponseEntity<?> getStudents(){
         return studentService.getStudents();
     }
