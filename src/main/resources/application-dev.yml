@@ -1,0 +1,19 @@
+# server config
+server:
+  port: 8050
+spring:
+  application:
+    name: map-api
+  datasource:
+    name: map-api
+    url: jdbc:mysql://localhost:3306/map_demo
+    username: root
+    password: 1010101Shiv@
+    driver:
+      class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialeact: org.hibernate.dialeact.MySQL8Dialeact
+    hibernate:
+      ddl-auto: update
