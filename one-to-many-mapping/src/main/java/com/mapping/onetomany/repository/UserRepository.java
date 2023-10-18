@@ -1,6 +1,6 @@
-package com.mapping.onetoone.repository;
+package com.mapping.onetomany.repository;
 
-import com.mapping.onetoone.entity.User;
+import com.mapping.onetomany.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,9 @@
-package com.mapping.onetoone.entity;
+package com.mapping.onetomany.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -13,6 +14,6 @@ public class User {
     private int id;
     private String name;
     private String email;
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Address address;
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval = true)
+    private List<Address> addresses;
 }

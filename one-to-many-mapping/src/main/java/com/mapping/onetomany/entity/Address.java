@@ -1,4 +1,4 @@
-package com.mapping.onetoone.entity;
+package com.mapping.onetomany.entity;
 
 import lombok.Data;
 

@@ -1,21 +1,24 @@
-package com.mapping.onetoone;
+package com.mapping.onetomany;
 
-import com.mapping.onetoone.entity.Address;
-import com.mapping.onetoone.entity.User;
-import com.mapping.onetoone.repository.UserRepository;
+import com.mapping.onetomany.entity.Address;
+import com.mapping.onetomany.entity.User;
+import com.mapping.onetomany.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @SpringBootApplication
 @AllArgsConstructor
-public class OneToOneMappingApplication {
+public class OneToManyMappingApplication {
 	private final UserRepository userRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(OneToOneMappingApplication.class, args);
+		SpringApplication.run(OneToManyMappingApplication.class, args);
 	}
 
 	@PostConstruct
@@ -27,7 +30,15 @@ public class OneToOneMappingApplication {
 		Address address=new Address();
 		address.setDistrict("Sddn");
 		address.setVillage("Chan");
-		user.setAddress(address);
+
+		Address address2=new Address();
+		address2.setDistrict("Sddn2");
+		address2.setVillage("Chan2");
+		List<Address> addresses=new ArrayList<>();
+		addresses.add(address);
+		addresses.add(address2);
+
+		user.setAddresses(addresses);
 
 		var savedUser= userRepository.save(user);
 		System.out.println(savedUser);

@@ -2,15 +2,15 @@ server:
   port: 8081
 spring:
   application:
-    name: one-to-one
+    name: one-to-many
   datasource:
-    name: one-to-one
+    name: one-to-many
     url: jdbc:mysql://localhost:3306/mapping
     username: def_shiv
     password: def_shiv
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
