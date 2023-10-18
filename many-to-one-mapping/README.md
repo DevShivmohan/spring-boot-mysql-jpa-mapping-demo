@@ -1,3 +1,2 @@
-**One to one mapping**
-
-![image](https://github.com/DevShivmohan/spring-boot-mysql-jpa-mapping-demo/assets/72655528/665ce671-7571-47da-8dc4-1f51c332fc07)
+**Many to one mapping**
+![image](https://github.com/DevShivmohan/spring-boot-mysql-jpa-mapping-demo/assets/72655528/08ee7819-54cc-48aa-86fd-4b8b45b160d5)
