@@ -18,6 +18,9 @@ public class OneToOneMappingApplication {
 		SpringApplication.run(OneToOneMappingApplication.class, args);
 	}
 
+	/**
+	 * Single user has only single address in one to one mapping
+	 */
 	@PostConstruct
 	public void saveUser(){
 		User user=new User();
@@ -27,6 +30,7 @@ public class OneToOneMappingApplication {
 		Address address=new Address();
 		address.setDistrict("Sddn");
 		address.setVillage("Chan");
+
 		user.setAddress(address);
 
 		var savedUser= userRepository.save(user);

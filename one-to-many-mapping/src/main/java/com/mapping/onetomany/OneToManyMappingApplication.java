@@ -21,21 +21,25 @@ public class OneToManyMappingApplication {
 		SpringApplication.run(OneToManyMappingApplication.class, args);
 	}
 
+	/**
+	 * Single user has multiple addresses in one to many relationship mapping
+	 */
 	@PostConstruct
 	public void saveUser(){
 		User user=new User();
 		user.setName("A");
 		user.setEmail("a@gmail.com");
 
-		Address address=new Address();
-		address.setDistrict("Sddn");
-		address.setVillage("Chan");
+		Address address1=new Address();
+		address1.setDistrict("Sddn");
+		address1.setVillage("Chan");
 
 		Address address2=new Address();
 		address2.setDistrict("Sddn2");
 		address2.setVillage("Chan2");
+
 		List<Address> addresses=new ArrayList<>();
-		addresses.add(address);
+		addresses.add(address1);
 		addresses.add(address2);
 
 		user.setAddresses(addresses);
