@@ -16,6 +16,6 @@ public class Address {
     private int id;
     private String village;
     private String district;
-    @ManyToMany(mappedBy = "addresses",cascade = CascadeType.ALL)
-    private Set<User> users=new HashSet<>();
+    @ManyToMany(mappedBy = "addresses", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<User> users = new HashSet<>();
 }
