@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: many-to-many
+  datasource:
+    name: many-to-many
+    url: jdbc:mysql://localhost:3306/mapping
+    username: def_shiv
+    password: def_shiv
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
